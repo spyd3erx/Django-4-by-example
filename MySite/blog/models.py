@@ -14,8 +14,8 @@ class Post(models.Model):
                                related_name='blog_posts')
     body = models.TextField()                #text
     publish = models.DateTimeField(default=timezone.now) #datetime
-    created = models.DateTimeField(auto_now_add=True) #datetime
-    updated = models.DateTimeField(auto_now=True) #datetime
+    created_at = models.DateTimeField(auto_now_add=True) #datetime
+    updated_at = models.DateTimeField(auto_now=True) #datetime
 
     class Meta:
         ordering = ('-publish',)
